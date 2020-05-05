@@ -28,7 +28,9 @@ export const Box = styled.div`
   padding: 40px;
 `;
 
-export const BottomButtomBar
+export const BottomButtomBar = styled.div`
+
+`
 
 export const AnimatedText = styled.div`
   text-align: "center";
