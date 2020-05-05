@@ -1,3 +1,7 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-const Main
+const Main:FC = () => {
+    return(<div></div>)
+}
+
+export default Main;
