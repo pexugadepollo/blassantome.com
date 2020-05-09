@@ -26,11 +26,19 @@ export const Box = styled.div`
   height: 40vh;
   border-radius: 30px;
   padding: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
 `;
 
 export const BottomButtomBar = styled.div`
-
-`
+  position: absolute;
+  min-height: 35px;
+  bottom: -22.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const AnimatedText = styled.div`
   text-align: "center";
