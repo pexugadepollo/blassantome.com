@@ -1,3 +1,7 @@
-export interface BottomContainerProps {
+export interface ButtonContainerProps {
     primary?: boolean;
+}
+
+export interface BaseComponentProps {
+    buttonPosition?: number;
 }

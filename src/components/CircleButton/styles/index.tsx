@@ -1,18 +1,31 @@
-import styled from "styled-components";
-import { BottomContainerProps } from "./types";
+import styled, { css } from "styled-components";
+import { ButtonContainerProps, BaseComponentProps } from "./types";
 
-export const ButtomContainer = styled.div`
+export const BaseComponent = styled.div<BaseComponentProps>`
+display: flex;
+align-items: center;
+justify-content: center;
+width: 55px;
+right: ${(props) => props.buttonPosition === 1 ? "50%" : "inherit"};
+left: ${(props) => props.buttonPosition === 3 ? "50%" : "inherit"};
+`;
+export const ButtomContainer = styled.div<ButtonContainerProps>`
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fff;
   border-radius: 100px;
-  width: ${(props: BottomContainerProps) => (props.primary ? "45px" : "35px")};
-  height: ${(props: BottomContainerProps) => (props.primary ? "45px" : "35px")};
+  width: 35px;
+  height: 35px;
   box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.12);
-  transition: box-shadow 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67),
-    width 0.5s ease-in-out, height 0.5s ease-in-out;
-  margin: 0 10px;
+  transition: box-shadow .2s ease-in-out, width .2s linear, height .2s linear;
+  ${(props) =>
+    props.primary &&
+    css`
+      width: 45px;
+      height: 45px;
+    `}
   &:hover {
     box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.12);
   }
