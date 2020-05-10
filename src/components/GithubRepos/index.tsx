@@ -20,7 +20,8 @@ const GithubRepos: FC = () => {
     (async () => {
       try {
         const response = await axios.get(
-          "http://localhost:2233/github/listRepos"
+/*           "http://localhost:2233/github/listRepos"
+ */          "https://blassantome-webpage-api.herokuapp.com/github/listRepos"
         );
 
         setLoading(false);
