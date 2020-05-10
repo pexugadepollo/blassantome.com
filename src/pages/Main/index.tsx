@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState, useEffect } from "react";
 import * as SC from "./styles";
 import CircleButton from "../../components/CircleButton";
 import {
@@ -18,7 +18,7 @@ const Main: FC = () => {
     home: {},
     contact: {},
   });
-
+  const [styleTabs, setStyle] = useState({});
 
   const rotateAnimation = (tabSelect: string) => {
     let rotate = 0;
@@ -31,14 +31,13 @@ const Main: FC = () => {
           rotateCompleted = true;
         }
       } else {
-          rotate += 2;
-          setAnimate((prevAnimateButtons) => {
-            return {
-              ...prevAnimateButtons,
-              [tabSelect]: { transform: `rotate(${rotate}deg)` },
-            };
-          });
-        
+        rotate += 2;
+        setAnimate((prevAnimateButtons) => {
+          return {
+            ...prevAnimateButtons,
+            [tabSelect]: { transform: `rotate(${rotate}deg)` },
+          };
+        });
       }
     }, 1);
     const phase2 = (rotate: number) => {
@@ -77,6 +76,9 @@ const Main: FC = () => {
       }, 1);
     };
   };
+  useEffect(() => {
+
+  }, [tabSelected]);
   const getTabName = (tab: number) => {
     switch (tab) {
       case 1:
@@ -95,17 +97,30 @@ const Main: FC = () => {
     const tabString = getTabName(tab);
     if (tabSelected === tab) {
       rotateAnimation(tabString);
-    }else{
+    } else {
       setTab(tab);
     }
     switch (tab) {
       case 1:
         history.push("/Projects");
+        setStyle({
+          width: '70vw',
+          height: '60vh'
+        })
         break;
       case 2:
+        setStyle({
+          width: '25vw',
+          height: '40vh'
+        })
+
         history.push("/Home");
         break;
       case 3:
+        setStyle({
+          width: '50vw',
+          height: '50vh'
+        })
         history.push("/Contact");
         break;
       default:
@@ -116,7 +131,7 @@ const Main: FC = () => {
     <div>
       <SC.Background />
       <SC.MainContainer>
-        <SC.Box>
+        <SC.Box style={styleTabs}>
           {/* <SC.AnimatedText>
                 <p>Hola</p>
                 <p>Soy Blas</p>
@@ -128,7 +143,7 @@ const Main: FC = () => {
             <Route exact path="/">
               <Redirect to="/Home" />
             </Route>
-            <Route exact path="/Home" component={Home} />
+            <Route exact path="/Home" component={Home}  />
             <Route exact path="/Projects" component={Projects} />
             <Route exact path="/Contact" component={Contact} />
           </Switch>

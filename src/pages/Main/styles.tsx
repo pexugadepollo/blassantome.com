@@ -29,6 +29,7 @@ export const Box = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  transition:all .5s ease-in-out
 `;
 
 export const BottomButtomBar = styled.div`
