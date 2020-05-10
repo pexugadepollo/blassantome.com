@@ -1,6 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 70.8">
     <defs>
-        <style>.f2312b6d-69f5-4809-a469-a0392bf4bbae{fill:#b9f7ff;}.e98958b3-23bb-4bd0-b552-60f14b40b089,.efb4fed1-caf2-4f74-a11f-fa6e12b58022{fill:none;stroke-miterlimit:10;}.efb4fed1-caf2-4f74-a11f-fa6e12b58022{stroke:#18d9ff;}.e98958b3-23bb-4bd0-b552-60f14b40b089{stroke:#fff;}.f16c72cf-8624-4601-9a50-3194c95ee7ba{font-size:43.85px;font-family:RoundedMplus1c-Thin, "Rounded Mplus 1c";font-weight:200;letter-spacing:-0.17em;}.e0bb2f7c-61ca-419b-a955-150026b20549{letter-spacing:-0.15em;}</style>
+        <style>
+            .f2312b6d-69f5-4809-a469-a0392bf4bbae {
+            fill: #b9f7ff;
+          }
+          .e98958b3-23bb-4bd0-b552-60f14b40b089,
+          .efb4fed1-caf2-4f74-a11f-fa6e12b58022 {
+            fill: none;
+            stroke-miterlimit: 10;
+          }
+          .efb4fed1-caf2-4f74-a11f-fa6e12b58022 {
+            stroke: #18d9ff;
+          }
+          .e98958b3-23bb-4bd0-b552-60f14b40b089 {
+            stroke: #fff;
+          }
+          .f16c72cf-8624-4601-9a50-3194c95ee7ba {
+            font-size: 43.85px;
+            font-family: RoundedMplus1c-Thin, "Rounded Mplus 1c";
+            font-weight: 200;
+            letter-spacing: -0.17em;
+          }
+          .e0bb2f7c-61ca-419b-a955-150026b20549 {
+            letter-spacing: -0.15em;
+          }
+          </style>
     </defs>
     <g id="e451c100-a1f9-4a48-8248-2675fa008b91" data-name="rest">
         <rect class="f2312b6d-69f5-4809-a469-a0392bf4bbae" x="1.5" y="1.5" width="57.21" height="57.21" />
