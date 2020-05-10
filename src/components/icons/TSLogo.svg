@@ -1,20 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 70.8">
     <defs>
-        <style>.cls-1{fill:#b9f7ff;}.cls-2,.cls-3{fill:none;stroke-miterlimit:10;}.cls-2{stroke:#18d9ff;}.cls-3{stroke:#fff;}.cls-4{font-size:43.85px;font-family:RoundedMplus1c-Thin, "Rounded Mplus 1c";font-weight:200;letter-spacing:-0.17em;}.cls-5{letter-spacing:-0.15em;}</style>
+        <style>.f2312b6d-69f5-4809-a469-a0392bf4bbae{fill:#b9f7ff;}.e98958b3-23bb-4bd0-b552-60f14b40b089,.efb4fed1-caf2-4f74-a11f-fa6e12b58022{fill:none;stroke-miterlimit:10;}.efb4fed1-caf2-4f74-a11f-fa6e12b58022{stroke:#18d9ff;}.e98958b3-23bb-4bd0-b552-60f14b40b089{stroke:#fff;}.f16c72cf-8624-4601-9a50-3194c95ee7ba{font-size:43.85px;font-family:RoundedMplus1c-Thin, "Rounded Mplus 1c";font-weight:200;letter-spacing:-0.17em;}.e0bb2f7c-61ca-419b-a955-150026b20549{letter-spacing:-0.15em;}</style>
     </defs>
-    <g id="rest">
-        <rect class="cls-1" x="1.5" y="1.5" width="57.21" height="57.21" />
-        <path class="cls-1" d="M58.2,2V58.2H2V2H58.2m1-1H1V59.2H59.2V1Z" />
-        <line class="cls-2" x1="58.5" y1="1" x2="58.5" y2="59" />
-        <line class="cls-2" x1="57.5" y1="1" x2="57.5" y2="59" />
-        <line class="cls-3" x1="2.5" y1="1" x2="2.5" y2="59" />
-        <line class="cls-3" x1="1.5" y1="1" x2="1.5" y2="59" />
+    <g id="e451c100-a1f9-4a48-8248-2675fa008b91" data-name="rest">
+        <rect class="f2312b6d-69f5-4809-a469-a0392bf4bbae" x="1.5" y="1.5" width="57.21" height="57.21" />
+        <path class="f2312b6d-69f5-4809-a469-a0392bf4bbae" d="M58.2,2V58.2H2V2H58.2m1-1H1V59.2H59.2V1Z" />
+        <line class="efb4fed1-caf2-4f74-a11f-fa6e12b58022" x1="58.5" y1="1" x2="58.5" y2="59" />
+        <line class="efb4fed1-caf2-4f74-a11f-fa6e12b58022" x1="57.5" y1="1" x2="57.5" y2="59" />
+        <line class="e98958b3-23bb-4bd0-b552-60f14b40b089" x1="2.5" y1="1" x2="2.5" y2="59" />
+        <line class="e98958b3-23bb-4bd0-b552-60f14b40b089" x1="1.5" y1="1" x2="1.5" y2="59" />
         <path d="M58,1a1,1,0,0,1,1,1V58a1,1,0,0,1-1,1H2.05a1,1,0,0,1-1-1V2.05a1,1,0,0,1,1-1H58m0-1H2.05A2.05,2.05,0,0,0,0,2.05V58a2.05,2.05,0,0,0,2.05,2H58a2.05,2.05,0,0,0,2-2V2.05a2.05,2.05,0,0,0-2-2Z" />
     </g>
-    <g id="text">
-        <text class="cls-4" transform="translate(22.3 55.89) scale(0.82 1)">
+    <g id="a66b4319-1dfd-4111-9b52-b34713389397" data-name="text">
+        <text class="f16c72cf-8624-4601-9a50-3194c95ee7ba" transform="translate(22.3 55.89) scale(0.82 1)">
             T
-            <tspan class="cls-5" x="20.08" y="0">S</tspan>
+            <tspan class="e0bb2f7c-61ca-419b-a955-150026b20549" x="20.08" y="0">S</tspan>
         </text>
         <text />
     </g>
