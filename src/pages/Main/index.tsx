@@ -133,7 +133,6 @@ const Main: FC = () => {
                 }
           }
         >
-          {tabSelected}
           <Switch>
             <Route exact path="/">
               <Redirect to="/Home" />
