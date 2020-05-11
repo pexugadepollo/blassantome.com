@@ -10,15 +10,15 @@ import { Switch, Route, Redirect, useHistory } from "react-router-dom";
 import Home from "./tabs/Home";
 import Projects from "./tabs/Projects";
 import Contact from "./tabs/Contact";
+import { useTab } from "../../hooks/useTab";
 const Main: FC = () => {
   const history = useHistory();
-  const [tabSelected, setTab] = useState(2);
+  const { tabSelected, setTab } = useTab();
   const [animateButtons, setAnimate] = useState({
     projects: {},
     home: {},
     contact: {},
   });
-  const [styleTabs, setStyle] = useState({});
 
   const rotateAnimation = (tabSelect: string) => {
     let rotate = 0;
@@ -76,9 +76,6 @@ const Main: FC = () => {
       }, 1);
     };
   };
-  useEffect(() => {
-
-  }, [tabSelected]);
   const getTabName = (tab: number) => {
     switch (tab) {
       case 1:
@@ -103,24 +100,11 @@ const Main: FC = () => {
     switch (tab) {
       case 1:
         history.push("/Projects");
-        setStyle({
-          width: '70vw',
-          height: '60vh'
-        })
         break;
       case 2:
-        setStyle({
-          width: '25vw',
-          height: '40vh'
-        })
-
         history.push("/Home");
         break;
       case 3:
-        setStyle({
-          width: '50vw',
-          height: '50vh'
-        })
         history.push("/Contact");
         break;
       default:
@@ -131,19 +115,30 @@ const Main: FC = () => {
     <div>
       <SC.Background />
       <SC.MainContainer>
-        <SC.Box style={styleTabs}>
-          {/* <SC.AnimatedText>
-                <p>Hola</p>
-                <p>Soy Blas</p>
-                <p>Un mesaje</p>
-                <p>Otro mensaje</p>
-                <p>Otro mas</p>
-            </SC.AnimatedText> */}
+        <SC.Box
+          style={
+            tabSelected === 1
+              ? {
+                  width: "70vw",
+                  height: "60vh",
+                }
+              : tabSelected === 3
+              ? {
+                  width: "25vw",
+                  height: "40vh",
+                }
+              : {
+                  width: "50vw",
+                  height: "50vh",
+                }
+          }
+        >
+          {tabSelected}
           <Switch>
             <Route exact path="/">
               <Redirect to="/Home" />
             </Route>
-            <Route exact path="/Home" component={Home}  />
+            <Route exact path="/Home" component={Home} />
             <Route exact path="/Projects" component={Projects} />
             <Route exact path="/Contact" component={Contact} />
           </Switch>
