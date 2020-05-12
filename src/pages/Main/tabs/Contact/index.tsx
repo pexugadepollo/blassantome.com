@@ -20,8 +20,8 @@ const Contact: FC = () => {
   const sendMail = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:2233/mail/send",
-        //"https://api.blassantome.com/mail/send",
+        //"http://localhost:2233/mail/send",
+        "https://api.blassantome.com/mail/send",
         formData
       );
       setResponse(response);
