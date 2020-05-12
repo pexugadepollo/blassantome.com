@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import backgroundImage from "../../img/blue-fluid.jpg";
+import backgroundImage from "../../img/blue-fluid.webp";
 
 export const Background = styled.div`
   background: url(${backgroundImage}) no-repeat center center fixed;
