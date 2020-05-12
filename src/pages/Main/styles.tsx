@@ -9,6 +9,26 @@ export const Background = styled.div`
   min-height: 100vh;
 `;
 
+export const ScrollContainer = styled.div`
+  width: 100%;
+  height: 90%;
+  overflow: scroll;
+  padding: 40px 40px 10px 40px;
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0);
+  }
+`;
+
 export const MainContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -25,11 +45,11 @@ export const Box = styled.div`
   width: 25vw;
   height: 40vh;
   border-radius: 30px;
-  padding: 40px;
+  padding: 10px 10px 40px 10px;
   position: relative;
   display: flex;
   justify-content: center;
-  transition:all .5s ease-in-out
+  transition: all 0.5s ease-in-out;
 `;
 
 export const BottomButtomBar = styled.div`
@@ -40,5 +60,3 @@ export const BottomButtomBar = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
-

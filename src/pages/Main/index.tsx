@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from "react";
+import React, { FC, useState } from "react";
 import * as SC from "./styles";
 import CircleButton from "../../components/CircleButton";
 import {
@@ -80,13 +80,10 @@ const Main: FC = () => {
     switch (tab) {
       case 1:
         return "projects";
-        break;
       case 2:
         return "home";
-        break;
       case 3:
         return "contact";
-        break;
     }
     return "";
   };
@@ -124,23 +121,25 @@ const Main: FC = () => {
                 }
               : tabSelected === 3
               ? {
-                  width: "25vw",
-                  height: "40vh",
-                }
-              : {
                   width: "50vw",
                   height: "50vh",
                 }
+              : {
+                  width: "25vw",
+                  height: "40vh",
+                }
           }
         >
-          <Switch>
-            <Route exact path="/">
-              <Redirect to="/Home" />
-            </Route>
-            <Route exact path="/Home" component={Home} />
-            <Route exact path="/Projects" component={Projects} />
-            <Route exact path="/Contact" component={Contact} />
-          </Switch>
+          <SC.ScrollContainer>
+            <Switch>
+              <Route exact path="/">
+                <Redirect to="/Home" />
+              </Route>
+              <Route exact path="/Home" component={Home} />
+              <Route exact path="/Projects" component={Projects} />
+              <Route exact path="/Contact" component={Contact} />
+            </Switch>
+          </SC.ScrollContainer>
           <SC.BottomButtomBar>
             <CircleButton
               icon={<ProjectTwoTone />}
