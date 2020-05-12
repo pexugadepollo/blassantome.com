@@ -20,8 +20,8 @@ const GithubRepos: FC = () => {
     (async () => {
       try {
         const response = await axios.get(
-/*           "http://localhost:2233/github/listRepos"
- */          "https://api.blassantome.com/github/listRepos"
+          //"http://localhost:2233/github/listRepos"
+          "https://api.blassantome.com/github/listRepos"
         );
 
         setLoading(false);
@@ -32,7 +32,7 @@ const GithubRepos: FC = () => {
       }
     })();
   }, []);
-  console.log(repos)
+  console.log(repos);
   if (loading) return <Spinner />;
   if (error) return <p style={{ color: "red" }}>{error}</p>;
   return (
@@ -51,7 +51,10 @@ const GithubRepos: FC = () => {
           }
         />
       ))}
-      <a style={{textDecoration: 'none', color: '#1890ff'}} href="https://github.com/pexugadepollo?tab=repositories">
+      <a
+        style={{ textDecoration: "none", color: "#1890ff" }}
+        href="https://github.com/pexugadepollo?tab=repositories"
+      >
         Puedes ver más de mis proyectos en GitHub
       </a>
     </section>
