@@ -32,7 +32,6 @@ const GithubRepos: FC = () => {
       }
     })();
   }, []);
-  console.log(repos);
   if (loading) return <Spinner />;
   if (error) return <p style={{ color: "red" }}>{error}</p>;
   return (

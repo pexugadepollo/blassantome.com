@@ -1,5 +1,5 @@
 import styled from 'styled-components'
 
-export const InputGroup = styled.div`
+export const InputGroupForm = styled.div`
 min-width: 80%
 `

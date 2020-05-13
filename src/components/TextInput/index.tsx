@@ -7,6 +7,7 @@ interface TextInputProps {
   error?: string;
   label: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
 }
 
 const TextInput: FC<TextInputProps> = ({
@@ -14,6 +15,7 @@ const TextInput: FC<TextInputProps> = ({
   error,
   label,
   name,
+  onBlur,
   onChange,
 }) => {
   return (
@@ -24,6 +26,7 @@ const TextInput: FC<TextInputProps> = ({
         name={name}
         value={value}
         onChange={onChange}
+        onBlur={onBlur}
         required
       />
       <SC.ErrorMessage>{error}</SC.ErrorMessage>
