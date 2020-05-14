@@ -55,15 +55,15 @@ const Contact: FC = () => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
   const handleOnClick = () => {
-    const validFormErrors = {
-      name: "",
-      email: "",
-      subject: "",
-      body: "",
-    };
-    if (formErrors === validFormErrors) {
+    // const validFormErrors = {
+    //   name: "",
+    //   email: "",
+    //   subject: "",
+    //   body: "",
+    // };
+    // if (formErrors === validFormErrors) {
       sendMail();
-    }
+    //}
   };
   const handleBlur = (
     e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
