@@ -11,6 +11,7 @@ export const Spinner = styled.div`
     border: 4px solid #fff;
     opacity: 1;
     border-radius: 50%;
+    background-color: gray;
     animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
     @keyframes lds-ripple {
       0% {

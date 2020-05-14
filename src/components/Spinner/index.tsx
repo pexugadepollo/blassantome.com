@@ -3,10 +3,12 @@ import * as SC from "./styles";
 
 const Spinner: FC = () => {
   return (
-    <SC.Spinner>
-      <div></div>
-      <div></div>
-    </SC.Spinner>
+    <SC.SpinnerContainer>
+      <SC.Spinner>
+        <div></div>
+        <div></div>
+      </SC.Spinner>
+    </SC.SpinnerContainer>
   );
 };
 
