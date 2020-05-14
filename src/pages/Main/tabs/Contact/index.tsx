@@ -4,10 +4,12 @@ import * as SC from "./style";
 import TextInput from "../../../../components/TextInput";
 import TextAreaInput from "../../../../components/TextAreaInput";
 import SquareRoundedButton from "../../../../components/SquareRoundedButton";
+import SnackBar from '../../../../components/SnackBar'
 import axios from "axios";
 
 const Contact: FC = () => {
   const { setTab } = useTab();
+  const [snackOpen, setSnack]= useState(true);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [formErrors, setFormErrors] = useState({
@@ -30,11 +32,19 @@ const Contact: FC = () => {
         formData
       );
       setLoading(false);
+      displaySnack();
     } catch (error) {
       setLoading(false);
       setError(error.response);
     }
   };
+
+  const displaySnack = () => {
+    setSnack(true);
+    setTimeout(() => {
+      setSnack(false)
+    }, 6000);
+  }
 
   useEffect(() => {
     setTab(3);
@@ -104,6 +114,7 @@ const Contact: FC = () => {
   };
 
   return (
+    <div>
     <SC.InputGroupForm>
       <TextInput
         label="Nombre *"
@@ -141,6 +152,8 @@ const Contact: FC = () => {
       />
       <SquareRoundedButton onClick={handleOnClick}>Enviar</SquareRoundedButton>
     </SC.InputGroupForm>
+    <SnackBar open={snackOpen} body="Mensaje enviado"></SnackBar>
+    </div>
   );
 };
 
