@@ -9,7 +9,7 @@ import axios from "axios";
 
 const Contact: FC = () => {
   const { setTab } = useTab();
-  const [snackOpen, setSnack]= useState(true);
+  const [snackOpen, setSnack]= useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [formErrors, setFormErrors] = useState({
