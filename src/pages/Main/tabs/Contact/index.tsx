@@ -10,8 +10,8 @@ import axios from "axios";
 const Contact: FC = () => {
   const { setTab } = useTab();
   const [snackOpen, setSnack]= useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  //const [loading, setLoading] = useState(false);
+  //const [error, setError] = useState(false);
   const [formErrors, setFormErrors] = useState({
     name: " ",
     email: " ",
@@ -26,16 +26,18 @@ const Contact: FC = () => {
   });
   const sendMail = async () => {
     try {
-      const response = await axios.post(
+      //const response =
+          await axios.post(
         //"http://localhost:2233/mail/send",
         "https://api.blassantome.com/mail/send",
         formData
       );
-      setLoading(false);
+
+      //setLoading(false);
       displaySnack();
     } catch (error) {
-      setLoading(false);
-      setError(error.response);
+      //setLoading(false);
+      //setError(error.response);
     }
   };
 
@@ -152,7 +154,7 @@ const Contact: FC = () => {
       />
       <SquareRoundedButton onClick={handleOnClick}>Enviar</SquareRoundedButton>
     </SC.InputGroupForm>
-    <SnackBar open={snackOpen} body="Mensaje enviado"></SnackBar>
+    <SnackBar open={snackOpen} body="Mensaje enviado"/>
     </div>
   );
 };
